@@ -48,6 +48,7 @@ export const DeployPanel = () => {
                 } />
             <Dropdown selected={startPoint}
                 header="start point"
+                disabled={!shipName}
                 menuItems={startPointItems}
                 onSelect={(value: string) => {
                     setStartPoint(value)
@@ -58,6 +59,7 @@ export const DeployPanel = () => {
                 } />
             <Dropdown selected={endPoint}
                 header="end point"
+                disabled={!startPoint}
                 menuItems={endPointItems ? endPointItems : []}
                 onSelect={(value: string) =>
                     setEndPoint(value)
