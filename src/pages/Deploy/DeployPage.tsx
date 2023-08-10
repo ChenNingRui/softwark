@@ -3,11 +3,11 @@ import { StyledDeployWrapper, StyledWrapper } from "./DeployPage.styles";
 import { useNavigate } from "react-router-dom";
 import { colIndexs, rowIndexs } from "../../types";
 import { DeployPanel } from "./organisms";
-import { useDeloyStore } from "./store/useDeployStore";
+import { useDeployStore } from "./store/useDeployStore";
 
 export const DeployPage = () => {
   const navigate = useNavigate();
-  const { cells, resetDeployPanel } = useDeloyStore();
+  const { cells, resetDeployPanel } = useDeployStore();
 
   return (
     <StyledWrapper>
